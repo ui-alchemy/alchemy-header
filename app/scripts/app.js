@@ -117,4 +117,7 @@ function MenuCtrl($scope){
         ]
     };
 
+
+    $scope.menu.active_item = $scope.menu.items[1];
+    $scope.menu.active_item.active = true;
 }

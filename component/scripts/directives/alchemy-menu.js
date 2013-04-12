@@ -15,24 +15,13 @@ angular.module('alchemy').directive('alchMenu', function($window){
             $scope.active_item = {};
             $scope.dropdown = {};
 
-            $scope.set_active = function(item){
-                $scope.active_item.active = false;
-                $scope.active_item = item;
-                item.active = true;
-            };
-
             $scope.handle_hover = function(item, mousein){
                 if( item.type === 'dropdown' && mousein ){
                     $scope.dropdown = item.items;
                     $scope.dropdown.show = true;
                     $scope.dropdown.direction = $scope.menu.location;
-                    item.active = true;
                 } else {
                     $scope.dropdown.show = false;
-                    
-                    if( $scope.active_item !== item ){
-                        item.active = false;
-                    }
                 }
             };
 
@@ -82,34 +71,15 @@ angular.module('alchemy').directive('alchDropdown', function(){
                 }
             };
 
-            $scope.handle_hover = function(item, mousein){
-            };
-
             $scope.isRight = function(direction){
                 return direction === 'right';
             };
 
-        },
-
-        link: function(scope, element) {
-            /*scope.$watch('dropdown.show', function(value){
-                if( value ){
-                    var $dropdown  = $(element),
-                        $menu_item = $(element).parent().find('.active-item');
-
-                    console.log($menu_item);
-                    if( $menu_item.offset() ){
-                        console.log($menu_item.offset().left);
-                        $dropdown.css('left', $menu_item.offset().left);
-                        $dropdown.css('top', $menu_item.offset().top + 22);
-                    }
-                }
-            });*/
         }
     };
 });
 
-angular.module('alchemy').directive('alchFlyout', function($window){
+angular.module('alchemy').directive('alchFlyout', function(){
     return {
         restrict: 'EA',
         transclude: true,
@@ -127,13 +97,6 @@ angular.module('alchemy').directive('alchFlyout', function($window){
                     item.active = false;
                 }
             };
-        },
-
-        link: function(scope, element) {
-            scope.$watch('flyout.show', function(){
-                var $element = $(element),
-                    $parent  = $element.parent();
-            });
         }
     };
 });

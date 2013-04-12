@@ -8,12 +8,11 @@ angular.module("alch-templates").run(function($templateCache) {
     "        ng-mouseleave=\"handle_hover(item, false)\">" +
     "        " +
     "        <a href=\"{{ item.url }}\" " +
-    "           ng-click=\"set_active(item)\" " +
     "           ng-class=\"{ 'active-item' : item.active }\"" +
     "           class=\"menu-item-link\">" +
     "        " +
     "          {{ item.display }}" +
-    "          <i class=\"down_arrow_icon-grey\" ng-show=\"item.type=='dropdown'\"></i>" +
+    "          <i class=\"down_arrow_icon-grey\" ng-show=\"item.type == 'dropdown'\"></i>" +
     "        </a>" +
     "        <ul alch-dropdown=\"item.items\"></ul>" +
     "    </li>" +
