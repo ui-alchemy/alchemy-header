@@ -67,16 +67,20 @@ angular.module('alchemy').directive('alchMenu', function($window){
         templateUrl: 'component/templates/menu.html',
 
         controller: function($scope) {
-            $scope.active_item = {};
             $scope.dropdown = {};
 
             $scope.handle_hover = function(item, mousein){
                 if( item.type === 'dropdown' && mousein ){
+                    item.active = true;
                     $scope.dropdown = item.items;
                     $scope.dropdown.show = true;
                     $scope.dropdown.direction = $scope.menu.location;
                 } else {
                     $scope.dropdown.show = false;
+
+                    if( item !== $scope.menu.active_item ){
+                        item.active = false;
+                    }
                 }
             };
 
@@ -129,7 +133,6 @@ angular.module('alchemy').directive('alchDropdown', function(){
             $scope.isRight = function(direction){
                 return direction === 'right';
             };
-
         }
     };
 });
