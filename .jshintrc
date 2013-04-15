@@ -21,6 +21,8 @@
   "smarttabs": true,
   "white": false,
   "globals": {
-    "angular": false
+    "angular": false,
+    "jquery" : true,
+    "$"	     : true
   }
 }
