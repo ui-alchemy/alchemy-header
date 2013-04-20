@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('alchemy').directive('alchMenu', function($window){
+angular.module('alchemy').directive('alchMenu', ['$window', function($window){
     return {
         restrict: 'EA',
         transclude: true,
@@ -11,7 +11,7 @@ angular.module('alchemy').directive('alchMenu', function($window){
         },
         templateUrl: 'component/templates/menu.html',
 
-        controller: function($scope) {
+        controller: ['$scope', function($scope) {
             $scope.dropdown = {};
 
             $scope.handle_hover = function(item, mousein){
@@ -29,7 +29,7 @@ angular.module('alchemy').directive('alchMenu', function($window){
                 }
             };
 
-        },
+        }],
 
         link: function(scope, element, attrs){
             if( attrs.compact !== undefined ){
@@ -46,7 +46,7 @@ angular.module('alchemy').directive('alchMenu', function($window){
             }
         }
     };
-});
+}]);
 
 angular.module('alchemy').directive('alchDropdown', function(){
     return {
@@ -58,7 +58,7 @@ angular.module('alchemy').directive('alchDropdown', function(){
         },
         templateUrl: 'component/templates/dropdown.html',
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             $scope.set_hover = function(item, mousein){
                 if( mousein ){
                     item.active = true;
@@ -78,7 +78,7 @@ angular.module('alchemy').directive('alchDropdown', function(){
             $scope.isRight = function(direction){
                 return direction === 'right';
             };
-        }
+        }]
     };
 });
 
@@ -92,7 +92,7 @@ angular.module('alchemy').directive('alchFlyout', function(){
         },
         templateUrl: 'component/templates/flyout.html',
 
-        controller: function($scope){
+        controller: ['$scope', function($scope){
             $scope.set_hover = function(item, mousein){
                 if( mousein ){
                     item.active = true;
@@ -100,6 +100,6 @@ angular.module('alchemy').directive('alchFlyout', function(){
                     item.active = false;
                 }
             };
-        }
+        }]
     };
 });

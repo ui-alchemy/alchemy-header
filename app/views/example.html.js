@@ -1,4 +1,4 @@
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("app/views/example.html",
     "<div ng-controller=\"MenuCtrl\">" +
     "  <header class=\"header logo-header\">" +
@@ -10,4 +10,4 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </header>" +
     "</div>" +
     "");
-});
+}]);

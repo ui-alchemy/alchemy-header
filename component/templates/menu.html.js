@@ -1,4 +1,4 @@
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/menu.html",
     "<nav ng-class=\"menu.location\">" +
     "  <ul class=\"menu-container\">" +
@@ -19,4 +19,4 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </ul>" +
     "</nav>" +
     "");
-});
+}]);

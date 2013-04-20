@@ -1,4 +1,4 @@
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/flyout.html",
     "<ul class=\"flyout\">" +
     "  <li ng-repeat=\"item in flyout\"" +
@@ -10,4 +10,4 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </li>" +
     "</ul>" +
     "");
-});
+}]);

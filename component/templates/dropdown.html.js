@@ -1,4 +1,4 @@
-angular.module("alch-templates").run(function($templateCache) {
+angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/dropdown.html",
     "<ul class=\"dropdown\" " +
     "    ng-class=\"{ 'dropdown-right' : isRight(dropdown.direction), 'dropdown-active' : dropdown.show }\">" +
@@ -14,4 +14,4 @@ angular.module("alch-templates").run(function($templateCache) {
     "  </li>" +
     "</ul>" +
     "");
-});
+}]);
