@@ -5,7 +5,7 @@ angular.module("alch-templates").run(function($templateCache) {
     "    <nav alch-menu=\"user_menu\"></nav>" +
     "  </header>" +
     "  <header class=\"header nav-header\">" +
-    "    <nav alch-menu=\"menu\"></nav>" +
+    "    <nav alch-menu=\"menu\" compact></nav>" +
     "    <nav alch-menu=\"admin_menu\"></nav>" +
     "  </header>" +
     "</div>" +
