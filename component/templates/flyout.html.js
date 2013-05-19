@@ -1,12 +1,13 @@
 angular.module("alch-templates").run(["$templateCache", function($templateCache) {
   $templateCache.put("component/templates/flyout.html",
     "<ul class=\"flyout\">" +
-    "  <li ng-repeat=\"item in flyout\"" +
+    "  <li class=\"flyout-item\"" +
+    "      ng-repeat=\"item in flyout\"" +
     "      ng-class=\"{ 'dropdown-highlight' : item.active }\"" +
-    "      ng-mouseenter=\"set_hover(item, true)\"" +
-    "      ng-mouseleave=\"set_hover(item, false)\">" +
+    "      ng-mouseenter=\"setHover(item, true)\"" +
+    "      ng-mouseleave=\"setHover(item, false)\">" +
     "  " +
-    "    <a href=\"{{ item.url }}\">{{ item.display }}</a>" +
+    "    <a class=\"flyout-item-link\" href=\"{{ item.url }}\">{{ item.display }}</a>" +
     "  </li>" +
     "</ul>" +
     "");

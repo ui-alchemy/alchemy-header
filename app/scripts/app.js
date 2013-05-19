@@ -28,10 +28,17 @@ function MenuCtrl($scope){
     $scope.menu = {
         location : 'left',
         items : [
-            { 
+            {
                 display : 'App',
-                url     : '#app'
-            },{ 
+                url     : '#/app',
+                type    : 'dropdown',
+                items   : [
+                    {
+                        display : 'Application 1',
+                        url     : '#/app',
+                    }
+                ]
+            },{
                 display : 'Content',
                 url     : '#/content',
                 type    : 'dropdown',
@@ -67,7 +74,7 @@ function MenuCtrl($scope){
                     },{
                         display : 'Content 8',
                 }]
-            },{ 
+            },{
                 display : 'Random Space',
                 url     : '#random',
                 type    : 'dropdown',
@@ -81,19 +88,19 @@ function MenuCtrl($scope){
                     },{
                         display : 'Random 4'
                 }]
-            },{ 
+            },{
                 display : 'RaspberryPI',
                 url     : '#raspberry'
             }
         ]
     };
-    
+
     $scope.admin_menu = {
         location : 'right',
         items : [
             {
                 display : 'Admin'
-            },{ 
+            },{
                 display : 'Notifications'
             }
 
@@ -109,7 +116,7 @@ function MenuCtrl($scope){
                 items: [
                     {
                         display : 'Admin'
-                    },{ 
+                    },{
                         display : 'Notifications'
                     }
                 ]
@@ -118,6 +125,6 @@ function MenuCtrl($scope){
     };
 
 
-    $scope.menu.active_item = $scope.menu.items[1];
-    $scope.menu.active_item.active = true;
+    $scope.menu.activeItem = $scope.menu.items[1];
+    $scope.menu.activeItem.active = true;
 }

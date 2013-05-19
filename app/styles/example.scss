@@ -1,3 +1,9 @@
+@import "compass";
+
+* {
+  @include box-sizing(border-box);
+}
+
 //This is where any styling specific to the component playground should go.
 @import "alchemy/alchemy";
 @import "alchemy/normalize";
