@@ -4,11 +4,11 @@ angular.module("alch-templates").run(["$templateCache", function($templateCache)
     "  <ul class=\"menu-container\">" +
     "    <li class=\"menu-item\"" +
     "        ng-repeat=\"item in menu.items\"" +
-    "        ng-mouseenter=\"handle_hover(item, true)\"" +
-    "        ng-mouseleave=\"handle_hover(item, false)\">" +
+    "        ng-mouseenter=\"handleHover(item, true)\"" +
+    "        ng-mouseleave=\"handleHover(item, false)\">" +
     "        " +
     "        <a href=\"{{ item.url }}\" " +
-    "           ng-class=\"{ 'active-item' : item.active }\"" +
+    "           ng-class=\"{ 'active-item' : item.active, 'menu-anchor' : item.type }\"" +
     "           class=\"menu-item-link\">" +
     "        " +
     "          {{ item.display }}" +

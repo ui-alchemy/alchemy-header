@@ -2,15 +2,22 @@ angular.module("alch-templates").run(["$templateCache", function($templateCache)
   $templateCache.put("component/templates/dropdown.html",
     "<ul class=\"dropdown\" " +
     "    ng-class=\"{ 'dropdown-right' : isRight(dropdown.direction), 'dropdown-active' : dropdown.show }\">" +
-    "  <li ng-repeat=\"item in dropdown\"" +
-    "      ng-mouseenter=\"set_hover(item, true)\"" +
-    "      ng-mouseleave=\"set_hover(item, false)\">" +
+    "  <li class=\"dropdown-item\"" +
+    "      ng-repeat=\"item in dropdown\"" +
+    "      ng-mouseenter=\"setHover(item, true)\"" +
+    "      ng-mouseleave=\"setHover(item, false)\">" +
     "  " +
-    "    <a class=\"dropdown-menu-item-link\" href=\"{{ item.url }}\">" +
+    "    <a class=\"dropdown-item-link\" " +
+    "       href=\"{{ item.url }}\" " +
+    "       ng-class=\"{'menu-anchor' : item.type, 'dropdown-item-link-active' : item.active }\">" +
+    "" +
     "      {{ item.display }}" +
     "      <i class=\"right_arrow_icon-grey flyout-indicator\" ng-show=\"item.type=='flyout'\"></i>" +
     "    </a>" +
-    "    <ul alch-flyout=\"item.items\" ng-show=\"flyout.show\" ng-class=\"{ 'dropdown-active' : dropdown.show }\"></ul>" +
+    "    <ul alch-flyout=\"item.items\" " +
+    "        ng-show=\"flyout.show\" " +
+    "        ng-class=\"{ 'dropdown-active' : dropdown.show }\">" +
+    "    </ul>" +
     "  </li>" +
     "</ul>" +
     "");
