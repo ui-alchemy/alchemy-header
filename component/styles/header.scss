@@ -1,3 +1,5 @@
+@import "compass";
+
 $nav-header_background:           #FFA500 !default;
 $logo-header_background:          darken($nav-header_background, 10%) !default;
 $menu-item_hover:                 darken($nav-header_background, 10%) !default;

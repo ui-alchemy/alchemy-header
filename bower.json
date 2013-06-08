@@ -1,14 +1,16 @@
 {
   "name": "alchemy-header",
   "version": "0.0.7",
-  "main" : ["./*.js", "./*.scss", "./*.css"],
+  "main" : ["*.scss", "*.css", ".js"],
+  "ignore": [
+  ],
   "dependencies": {
-    "angular": "~1.0.5",
     "jquery": "~1.9.1",
+    "angular": "~1.0.5",
     "alchemy": ">=0.0.1"
   },
   "devDependencies": {
-    "angular-mocks": "~1.0.5",
-    "angular-scenario": "~1.0.5"
-  }
+    "jquery": "~1.9.1",
+    "angular-mocks": "~1.0.5"
+ }
 }

@@ -30,17 +30,17 @@ angular.module('alchemy').directive('alchMenu', ['$window', function($window){
 
         }],
         link: function(scope, element, attrs) {
-            var element_original_offset;
+            var elementOriginalOffset;
 
             if (attrs.compact !== undefined) {
-                element_original_offset = $(element).offset().top;
+                elementOriginalOffset = $(element).offset().top;
 
                 angular.element($window).bind('scroll', function() {
-                    var window_scroll_top = $($window).scrollTop();
+                    var windowScrollTop = $($window).scrollTop();
 
-                    if (window_scroll_top > element_original_offset + 2) {
+                    if (windowScrollTop > elementOriginalOffset + 2) {
                         element.parent().addClass('compact');
-                    } else if (window_scroll_top < element_original_offset) {
+                    } else if (windowScrollTop < elementOriginalOffset) {
                         element.parent().removeClass('compact');
                     }
                  });
