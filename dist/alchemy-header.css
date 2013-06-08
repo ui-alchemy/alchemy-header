@@ -8,216 +8,106 @@
 .right {
   float: right;
 }
-
-/* line 15, ../../component/styles/header.scss */
-.logo-header {
-  height: 25px;
-  background-color: #cc8400;
-  z-index: 100;
-  line-height: 25px;
-}
-/* line 23, ../../component/styles/header.scss */
-.logo-header .logo {
-  margin-left: 30px;
-}
-/* line 27, ../../component/styles/header.scss */
-.logo-header .menu-container {
-  line-height: 25px;
-}
-/* line 30, ../../component/styles/header.scss */
-.logo-header .menu-container .menu-item {
-  line-height: 25px;
-}
-/* line 33, ../../component/styles/header.scss */
-.logo-header .menu-container .menu-item .menu-item-link {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  -webkit-transition: all 0.15s ease-in;
-  -moz-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
-  text-align: center;
-  font-family: overpass, sans-serif, sans;
-  text-decoration: none;
-  margin: 0 auto;
-}
-/* line 42, ../../component/styles/header.scss */
-.logo-header .menu-container .menu-item .menu-item-link:hover {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  color: #e6e6e6;
-  background: #996300;
-}
-/* line 49, ../../component/styles/header.scss */
-.logo-header .menu-container .menu-item .menu-item-link.active-item {
-  color: #e6e6e6;
-  background: #996300;
-}
-/* line 57, ../../component/styles/header.scss */
-.logo-header .dropdown-active {
-  box-shadow: none;
-}
-
-/* line 62, ../../component/styles/header.scss */
-.nav-header {
-  min-height: 40px;
-  background: orange;
-  border-top: 1px solid #ffb733;
-}
-/* line 67, ../../component/styles/header.scss */
-.nav-header .menu-item {
-  font-family: Overpass;
-  line-height: 37px;
-  vertical-align: baseline;
-  font-size: 14px;
-  position: relative;
-}
-/* line 74, ../../component/styles/header.scss */
-.nav-header .menu-item .menu-item-link {
-  -webkit-transition: all 0.15s ease-in;
-  -moz-transition: all 0.15s ease-in;
-  -o-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  text-align: center;
-  font-family: overpass, sans-serif, sans;
-  text-decoration: none;
-  margin: 0 auto;
-  color: black;
-}
-/* line 84, ../../component/styles/header.scss */
-.nav-header .menu-item .menu-item-link:hover {
-  -webkit-transition: all 0.15s ease-in-out;
-  -moz-transition: all 0.15s ease-in-out;
-  -o-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
-  border-bottom: 3px solid #ffdb99;
-  color: #e6e6e6;
-  background: #996300;
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
-}
-/* line 92, ../../component/styles/header.scss */
-.nav-header .menu-item .menu-item-link.active-item {
-  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
-  color: #e6e6e6;
-  border-bottom: 3px solid #ffdb99;
-  background: #996300;
-}
-
-/* line 102, ../../component/styles/header.scss */
-.menu-container {
-  position: relative;
-  left: 0;
-  display: block;
-  float: left;
-  margin: 0;
-  list-style: none;
-  line-height: 40px;
-}
-/* line 111, ../../component/styles/header.scss */
-.menu-container .menu-item {
-  line-height: 37px;
-  position: relative;
-  margin: 0;
-  float: left;
-}
-/* line 117, ../../component/styles/header.scss */
-.menu-container .menu-item .menu-item-link {
-  float: none;
-  padding: 0 15px;
-  text-decoration: none;
-  display: block;
-  cursor: default;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 128, ../../component/styles/header.scss */
-.menu-dropdown {
-  background: white;
-  position: absolute;
-  z-index: 1;
-}
-
-/* line 134, ../../component/styles/header.scss */
-.compact {
-  position: fixed;
-  vertical-align: middle;
-  top: 0;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-/* line 144, ../../component/styles/header.scss */
+/* line 16, ../../component/styles/header.scss */
 .right .menu-item .dropdown {
   right: -1px;
 }
 
-/* line 149, ../../component/styles/header.scss */
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: -1px;
+/* line 21, ../../component/styles/header.scss */
+.menu-container {
+  position: relative;
+  display: block;
   float: left;
-  min-width: 200px;
+  margin: 0;
+  list-style: none;
+}
+/* line 28, ../../component/styles/header.scss */
+.menu-container .menu-item {
+  line-height: 40px;
+  position: relative;
+  margin: 0;
+  float: left;
+  font-family: Overpass;
+  vertical-align: baseline;
+  font-size: 14px;
+}
+/* line 38, ../../component/styles/header.scss */
+.menu-container .menu-item-link {
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  float: none;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-family: overpass, sans-serif, sans;
+  text-decoration: none;
+  color: black;
+}
+/* line 52, ../../component/styles/header.scss */
+.menu-container .menu-item-link:hover {
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  color: #e6e6e6;
+  background: #996300;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
+/* line 59, ../../component/styles/header.scss */
+.menu-container .menu-item-link.active-item {
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  color: #e6e6e6;
+  background: #996300;
+}
+/* line 66, ../../component/styles/header.scss */
+.menu-container .menu-anchor {
+  cursor: default;
+}
+
+/* line 71, ../../component/styles/header.scss */
+.dropdown {
+  font-family: "Liberation-sans";
+  position: fixed;
   display: none;
   list-style: none;
   border-radius: 0 0 5px 5px;
   padding: 0;
   z-index: 3;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border: 1px solid #C8C8C8;
   border-top: none;
   box-shadow: 0px 1px 5px #C8C8C8;
   background: white;
   opacity: 1;
-  font-family: "Liberation-sans";
 }
-/* line 172, ../../component/styles/header.scss */
-.dropdown li {
+/* line 85, ../../component/styles/header.scss */
+.dropdown .dropdown-item {
   text-align: left;
   line-height: 35px;
   position: relative;
   display: block;
-  clear: both;
+  float: none;
 }
-/* line 179, ../../component/styles/header.scss */
-.dropdown li a, .dropdown li a:visited, .dropdown li a:active, .dropdown li a:link {
+/* line 93, ../../component/styles/header.scss */
+.dropdown .dropdown-item-link {
+  text-decoration: none;
   color: #000;
   text-decoration: none;
   display: block;
-  padding: 5px 0px 5px 20px;
+  padding: 5px 20px 5px 20px;
 }
-/* line 186, ../../component/styles/header.scss */
-.dropdown li:hover {
+/* line 101, ../../component/styles/header.scss */
+.dropdown .dropdown-item-link-active {
   background: black;
-}
-/* line 189, ../../component/styles/header.scss */
-.dropdown li:hover .dropdown-menu-item-link {
-  text-decoration: none;
   color: #e6e6e6;
 }
 
-/* line 197, ../../component/styles/header.scss */
-.dropdown-left {
-  left: 0;
-}
-
-/* line 201, ../../component/styles/header.scss */
-.dropdown-right {
-  right: 0;
-  left: auto;
-}
-
-/* line 206, ../../component/styles/header.scss */
+/* line 107, ../../component/styles/header.scss */
 .dropdown-active {
   -webkit-transition: all 0.4s ease-in;
   -moz-transition: all 0.4s ease-in;
@@ -226,14 +116,25 @@
   display: block;
 }
 
-/* line 211, ../../component/styles/header.scss */
+/* line 112, ../../component/styles/header.scss */
+.dropdown-left {
+  left: 0;
+}
+
+/* line 116, ../../component/styles/header.scss */
+.dropdown-right {
+  right: 0;
+  left: auto;
+}
+
+/* line 121, ../../component/styles/header.scss */
 .flyout-indicator {
   margin-top: 10px;
   float: right;
   margin-right: 5px;
 }
 
-/* line 217, ../../component/styles/header.scss */
+/* line 127, ../../component/styles/header.scss */
 .flyout {
   padding: 0;
   list-style: none;
@@ -247,27 +148,65 @@
   z-index: 2;
   background: white;
 }
-/* line 230, ../../component/styles/header.scss */
-.flyout li {
+/* line 140, ../../component/styles/header.scss */
+.flyout .flyout-item {
   text-align: left;
   line-height: 35px;
   position: relative;
   display: block;
   clear: both;
 }
-/* line 237, ../../component/styles/header.scss */
-.flyout li a, .flyout li a:visited, .flyout li a:active, .flyout li a:link {
+/* line 148, ../../component/styles/header.scss */
+.flyout .flyout-item-link {
   color: #000;
   text-decoration: none;
   display: block;
-  padding: 5px 0px 5px 20px;
+  padding: 5px 20px 5px 20px;
 }
-/* line 244, ../../component/styles/header.scss */
-.flyout li:hover {
+/* line 154, ../../component/styles/header.scss */
+.flyout .flyout-item-link:hover {
   background: black;
-}
-/* line 247, ../../component/styles/header.scss */
-.flyout li:hover a, .flyout li:hover a:visited, .flyout li:hover a:active, .flyout li:hover a:link {
-  text-decoration: none;
   color: #e6e6e6;
+}
+
+/* line 161, ../../component/styles/header.scss */
+.logo-header {
+  height: 25px;
+  background-color: #cc8400;
+  z-index: 3;
+}
+/* line 168, ../../component/styles/header.scss */
+.logo-header .logo {
+  margin-left: 30px;
+}
+/* line 172, ../../component/styles/header.scss */
+.logo-header .menu-container {
+  line-height: 25px;
+}
+/* line 175, ../../component/styles/header.scss */
+.logo-header .menu-container .menu-item {
+  line-height: 25px;
+}
+/* line 180, ../../component/styles/header.scss */
+.logo-header .dropdown-active {
+  box-shadow: none;
+}
+
+/* line 185, ../../component/styles/header.scss */
+.nav-header {
+  background: orange;
+  border-top: 1px solid #ffb733;
+  width: 100%;
+  overflow: auto;
+}
+
+/* line 192, ../../component/styles/header.scss */
+.compact {
+  position: fixed;
+  vertical-align: middle;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 2;
 }
