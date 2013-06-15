@@ -8,7 +8,8 @@
 
         <a href="{{ item.url }}"
            ng-class="{ 'active-item' : item.active, 'menu-anchor' : item.type }"
-           class="menu-item-link" ng-bind-html-unsafe="item.display">
+           class="menu-item-link"> 
+          <span ng-bind-html-unsafe="item.display"></span>
          <i class="down_arrow_icon-white" ng-show="item.type == 'dropdown'"></i>
         </a>
         <ul alch-dropdown="item.items"></ul>
