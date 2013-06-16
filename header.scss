@@ -4,7 +4,7 @@ $nav-header_background:           #FFA500 !default;
 $logo-header_background:          darken($nav-header_background, 10%) !default;
 $menu-item_hover:                 darken($nav-header_background, 10%) !default;
 $link_color:                      #000 !default;
-$link-hover_color:                lighten($link_color, 90%) !default;
+$link-hover_color:                lighten($link_color, 100%) !default;
 $link-border_color:               lighten($nav-header_background, 30%) !default;
 $dropdown-link-hover_background:  #000 !default;
 $nav-header_top_border:           lighten($nav-header_background, 10%) !default;
@@ -71,7 +71,6 @@ $menu-item_active_background:     darken($logo-header_background, 10%) !default;
 }
 
 .dropdown {
-  font-family: "Liberation-sans";
   position: fixed;
   display: none;
   list-style: none;
@@ -83,6 +82,7 @@ $menu-item_active_background:     darken($logo-header_background, 10%) !default;
   box-shadow: 0px 1px 5px #C8C8C8;
   background: white;
   opacity: 1;
+  min-width: 160px;
 
   .dropdown-item {
     text-align: left;
@@ -97,7 +97,10 @@ $menu-item_active_background:     darken($logo-header_background, 10%) !default;
     color: #000;
     text-decoration: none;
     display: block;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 5px 5px 20px;
+    overflow: auto;
+
+    span { float: left; }
   }
 
   .dropdown-item-link-active {
@@ -121,9 +124,11 @@ $menu-item_active_background:     darken($logo-header_background, 10%) !default;
 }
 
 .flyout-indicator {
-  margin-top: 10px;
-  float: right;
+  margin-top: 8px;
   margin-right: 5px;
+  margin-left: 10px;
+  font-size: 18px;
+  float: right;
 }
 
 .flyout {
@@ -132,7 +137,7 @@ $menu-item_active_background:     darken($logo-header_background, 10%) !default;
   position: absolute;
   top: -1px;
   left: 100%;
-  min-width: 180px;
+  min-width: 160px;
   border: 1px solid #C8C8C8;
   border-radius: 0 3px 3px 3px;
   box-shadow: 1px 0px 5px #C8C8C8;

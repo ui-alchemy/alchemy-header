@@ -11,8 +11,8 @@ angular.module("alch-templates").run(["$templateCache", function($templateCache)
     "    <a class=\"dropdown-item-link\"\n" +
     "       href=\"{{ item.url }}\"\n" +
     "       ng-class=\"{'menu-anchor' : item.type, 'dropdown-item-link-active' : item.active }\">\n" +
-    "      {{ item.display }}\n" +
-    "      <i class=\"right_arrow_icon-grey flyout-indicator\" ng-show=\"item.type=='flyout'\"></i>\n" +
+    "      <span class=\"fl\">{{ item.display }}</span>\n" +
+    "      <i class=\"icon-caret-right flyout-indicator\" ng-show=\"item.type=='flyout'\"></i>\n" +
     "    </a>\n" +
     "    <ul alch-flyout=\"item.items\"\n" +
     "        ng-show=\"flyout.show\"\n" +
@@ -46,8 +46,9 @@ angular.module("alch-templates").run(["$templateCache", function($templateCache)
     "\n" +
     "        <a href=\"{{ item.url }}\"\n" +
     "           ng-class=\"{ 'active-item' : item.active, 'menu-anchor' : item.type }\"\n" +
-    "           class=\"menu-item-link\" ng-bind-html-unsafe=\"item.display\">\n" +
-    "         <i class=\"down_arrow_icon-white\" ng-show=\"item.type == 'dropdown'\"></i>\n" +
+    "           class=\"menu-item-link\"> \n" +
+    "          <span ng-bind-html-unsafe=\"item.display\"></span>\n" +
+    "         <i class=\"icon-caret-down\" ng-show=\"item.type == 'dropdown'\"></i>\n" +
     "        </a>\n" +
     "        <ul alch-dropdown=\"item.items\"></ul>\n" +
     "    </li>\n" +
