@@ -45,7 +45,21 @@ function MenuCtrl($scope){
                 items   : [
                     {
                         display : 'Content 1 is super long',
-                        url     : '#/content1'
+                        url     : '#/content1',
+                        type    : 'flyout',
+                        items   : [
+                            {
+                                display : 'Subcontent 1',
+                                url     : '#/content/content1/subcontent1'
+                            },{
+                                display : 'Subcontent 2',
+                            },{
+                                display : 'Subcontent 3',
+                            },{
+                                display : 'Subcontent 4',
+                            },{
+                                display : 'Subcontent 5',
+                        }]
                     },{
                         display : 'Content 2 is even looooonnnggerrr',
                         url     : '#/content2',

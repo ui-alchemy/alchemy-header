@@ -55,6 +55,7 @@ module.exports = function (grunt) {
               lrSnippet,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, ''),
+              mountFolder(connect, 'demo/components'),
               mountFolder(connect, yeomanConfig.demo)
             ];
           }
@@ -104,12 +105,12 @@ module.exports = function (grunt) {
     },
     compass: {
       options: {
-        sassDir: './',
+        sassDir: 'demo/styles',
         cssDir: '.tmp/styles',
         imagesDir: 'demo/images',
         javascriptsDir: 'demo/scripts',
         fontsDir: 'demo/styles/fonts',
-        importPath: ['demo/components', 'component/styles'],
+        importPath: ['demo/components', 'component/styles', 'demo/styles'],
         relativeAssets: true
       },
       dist: {

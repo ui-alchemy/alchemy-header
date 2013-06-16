@@ -8,8 +8,8 @@
     <a class="dropdown-item-link"
        href="{{ item.url }}"
        ng-class="{'menu-anchor' : item.type, 'dropdown-item-link-active' : item.active }">
-      {{ item.display }}
-      <i class="right_arrow_icon-grey flyout-indicator" ng-show="item.type=='flyout'"></i>
+      <span class="fl">{{ item.display }}</span>
+      <i class="icon-caret-right flyout-indicator" ng-show="item.type=='flyout'"></i>
     </a>
     <ul alch-flyout="item.items"
         ng-show="flyout.show"
