@@ -4,9 +4,12 @@
   @include box-sizing(border-box);
 }
 
+$FontAwesomePath: "../font-awesome/font";
+
 //This is where any styling specific to the component playground should go.
 @import "alchemy/alchemy";
 @import "alchemy/normalize";
+@import "font-awesome/scss/font-awesome";
 
 $link_color: #000;
 
